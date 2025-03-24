@@ -21,6 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/relay', function () {
+Route::any('/relay', function () {
     return true;
 })->middleware(['metrics', 'auth.check']);
